@@ -13,7 +13,7 @@ namespace CityInfo.API.Controllers
             return Ok(CitiesDataStore.Current.Cities);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{cityId}")]
         public IActionResult GetCity(int id)
         {
             var cityToReturn = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == id);
